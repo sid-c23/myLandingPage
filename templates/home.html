@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="jumbotron">
+    <h2 class="text-center">Get your FREE copy of the 10 best businesses to start selling in!</h2>
+    <p class="lead text-center">Enter your email below and your free pdf will be emailed to you!</p>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <p class="lead text-center">We get it. It's hard to even begin. However, when you join our mailing list, we'll make sure you get the BEST value.</p>
+    </div>
+    <div class="col-sm-4 pull-right text-center">
+        <p class="lead">Along with this pdf, we'll work together to give you the tools to start making money online.</p>
+    </div>
+</div><br/><br/>
+<div class="row">
+    <div class="col-sm-12">
+        <p class="lead text-center">We promise that we only send you the emails that are worth reading. That means NO SPAM.</p>
+    </div>
+</div><br/><br/>
+
+{% if submitted %}
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <p class="lead">Thank you, your email will be sent shortly.</p>
+        </div>
+    </div>
+{% else %}
+    <div class="row">
+    <div class="col-sm-4 text-center">
+        <p class="lead">So what are you waiting for? Sign up now for FREE!</p>
+    </div>
+    <div class="col-sm-8">
+        <form method="POST" action="">{% csrf_token %}
+            {{ form|crispy }}
+            <input class='btn btn-primary btn-block' type="submit" value="Sign Up Today!"/>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

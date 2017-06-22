@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <h1>Contact Us</h1><br/><br/>
+    {% if submitted %}
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p class="lead">Thank you, your feedback is appreciated</p>
+            </div>
+        </div>
+    {% else %}
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <p class="lead">Want to let us know of anything? Send us a message here!</p>
+        </div>
+        <div class="col-sm-8">
+            <form action="" method="POST">{% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="Send" class="btn btn-primary btn-block"/>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^landing', include('HomeSignUp.urls', namespace='HomeSignUp')),
     url(r'^contact/', include('ContactUs.urls', namespace='Contact')),
+    url(r'^email/', include('EmailSend.urls', namespace='Email')),
+    url(r'^$', include('HomeSignUp.urls', namespace='HomSignUp'))
 ]

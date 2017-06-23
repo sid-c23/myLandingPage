@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>Send an email</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-sm-6">
+            <h4>Send an Email:</h4>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input class="btn btn-block btn-primary" type="submit" value="Send Email to Selected"/>
+            </form>
+        </div>
+        {% if request.POST %}
+            <div class="col-sm-6">
+                <p class="lead">Email sent!</p>
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}

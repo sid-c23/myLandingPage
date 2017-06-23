@@ -23,7 +23,11 @@ def landing(request):
 
         Enjoy,
         %s
-        """%(formName, fromEmail)
+
+
+
+        Not you? Don't worry, just ignore this. If you would like to learn of the 10 best businesses to start selling in, though, you can join us at %s.
+        """%(formName, fromEmail, settings.CURRENT_URL)
         attachedFile = os.path.join(os.path.join(settings.BASE_DIR, 'attachments'), 'hello.txt')
         email = EmailMessage(
         subjectMessage,

@@ -25,7 +25,7 @@ SECRET_KEY = 'z=h$b)0fy-eq9*fm%az%(8hm)1xna^6f-7kme^*9+h+1d6jkhk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['simplelanding.ddns.net']
+ALLOWED_HOSTS = ['simplelanding.ddns.net', 'localhost']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'entrepreneurlanding@gmail.com'
@@ -131,3 +131,5 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+CURRENT_URL = 'http://simplelanding.ddns.net'

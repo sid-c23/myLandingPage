@@ -27,11 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['simplelanding.ddns.net', 'localhost']
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'entrepreneurlanding@gmail.com'
-EMAIL_HOST_PASSWORD = 'V1LEWVv488rNWdw5'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+
 
 # Application definition
 
